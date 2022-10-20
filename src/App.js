@@ -6,6 +6,9 @@ import Shop from './components/Shop/Shop';
 import Orders from './components/Orders/Orders';
 import Inventory from './components/Inventory/Inventory';
 import { productsAndCartLoader } from './loaders/productsAndCartLoader';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -20,18 +23,31 @@ function App() {
           element: <Shop></Shop>
         },
         {
+          path: '/shop',
+          loader: () => fetch('products.json'),
+          element: <Shop></Shop>
+        },
+        {
           path:'orders',
           loader: productsAndCartLoader,
-          element: <Orders></Orders>
+          element: <PrivateRoute><Orders></Orders></PrivateRoute>
         },
         {
           path: 'inventory',
-          element: <Inventory></Inventory>
+          element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
         },
         {
           path:'about',
-          element:<About></About>
-        }
+          element:<PrivateRoute><About></About></PrivateRoute>
+        },
+        {
+          path:'login',
+          element: <Login></Login>
+        },
+        {
+          path:'signup',
+          element:<SignUp></SignUp>
+        },
       ]
     },
     

@@ -15,5 +15,29 @@
     margin-left: 36px;
 }
 .header a:hover{
-    color: orange;
+    color: yellow;
 }
+.active{
+    background-color: rgb(216, 166, 72);
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+.email, .sign-out{
+    color: whitesmoke;
+}
+.logout-button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: orangered;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    .logout-button{
+
+    }
+    .header{
+        flex-direction: column;
+    }
+  }

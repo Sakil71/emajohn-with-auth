@@ -1,0 +1,31 @@
+.form-container{
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px;
+    /* text-align: center; */
+}
+
+.form-control label{
+    display: block;
+}
+.email, .password{
+    padding: 10px 25px;
+    border-radius: 8px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.login-button{
+    border-radius: 8px;
+    background-color: tomato;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    color: white;
+
+    font-size: large;
+}
+.login-button:hover{
+    background-color: rgb(95, 23, 10);
+}
